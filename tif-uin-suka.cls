@@ -1,17 +1,9 @@
 %-------------------------------------------------------------------------------
-% Template Skripsi untuk JTETI FT UGM
-%
-% Dibuat oleh @gunturdputra TE09
-% Hasil fork dari file asli Pak Pekik Nurwantoro FMIPA
-% dan Mas Yohan Fajar Sidik TE08
-% Silakan digunakan dan diedit seperlunya, semoga bermanfaat
-%
-% (c) 2013-2014
+% Template Skripsi untuk TIF UIN SUKA
 %-------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-%Created by Pekik Nurwantoro, Universitas Gadjah Mada, Yogyakarta, Indonesia
-\ProvidesClass{jtetiskripsi}
+\ProvidesClass{tif-uin-suka}
 
 \RequirePackage[english,bahasa]{babel}
 \RequirePackage{indentfirst}
@@ -52,7 +44,7 @@
 \DeclareOption{inggris}{\@langindofalse\@langengtrue}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
-\ExecuteOptions{jtetiskripsi,satusetengahspasi,indonesia}
+\ExecuteOptions{tif-uin-suka,satusetengahspasi,indonesia}
 \ProcessOptions
 \LoadClass[a4paper,12pt]{report}
 %\RequirePackage{natbib}
@@ -258,7 +250,7 @@
       {Program Studi \@dept}
       \vspace{1.0cm}
        \vfill
-       \includegraphics[width=0.4\textwidth, natwidth=3937, natheight=4894]{gambar/logouin.png}
+       \includegraphics[width=0.4\textwidth]{images/logouin.png}
        \vfill
        \vspace{0.5cm}
        {\normalfont
@@ -272,7 +264,7 @@
          \MakeUppercase{\normalfont\bfseries Program Studi \@dept}\\
          \vspace{0.5em}
          \MakeUppercase{\normalfont\bfseries\@faculty} \\ 
-		\vspace{0.5em}         
+    \vspace{0.5em}         
          \MakeUppercase{\normalfont\bfseries\@university}\\
          \vspace{0.5em}
          \MakeUppercase{\normalfont\bfseries\@city}\\
@@ -292,9 +284,9 @@
   \let\clearpage\relax
   \begin{flushleft}
   \begin{tabular}{cccc}
-  \includegraphics[width=0.05\textwidth]{gambar/logouin.png} &
+  \includegraphics[width=0.05\textwidth]{images/logouin.png} &
   \textbf\@university &
-  \includegraphics[width=0.1\textwidth]{gambar/logotuv.jpg} &
+  \includegraphics[width=0.1\textwidth]{images/logotuv.jpg} &
   \textbf\approvalnumber  
   \end{tabular}
   \vspace{1cm}
@@ -302,49 +294,49 @@
   \chapter*{\underline\approvalname}%
   }
   \begin{flushleft}
- 	 \begin{singlespace}
-  		\justify
-  		{Hal \hspace*{1.3em} : Permohonan} \\
-  		{Lamp \hspace*{0.5em} : -} \\
-  		\\
-  		{Kepada} \\
-  		{Yth. Dekan \@faculty} \\
-  		{\shortuniversity} {\@city} \\
-  		{di \@city} \\
-  		
-  		\textit{Assalamu'alaikum wr. wb} \\
-  		\setlength{\parindent}{1.5em}
-  		\par Setelah membaca, meneliti, memberikan petunjuk dan mengoreksi serta mengadakan perbaikan seperlunya, maka kami selaku pembimbing berpendapat bahwa skripsi Saudara: \\
-  		
-  		\par Nama \hspace*{1.6cm} : \@fullname
-  		\par NIM \hspace*{1.8cm} : \@idnum
-  		\par Judul Skripsi \hspace*{0.4cm} : \@titleind \\
-  		
-  		\setlength{\parindent}{0em}
-  		sudah dapat diajukan kembali kepada Program Studi {\@dept} {\@faculty} {\@university} {\@city} sebagai salah satu syarat untuk memperoleh gelar Sarjanan Strata Satu dalam \@dept.
-  		
-  		\vspace{1em}
-  		\setlength{\parindent}{1.5em}
-  		\par{Dengan ini kami mengharap agar skripsi/tugas akhir Saudara tersebut di atas dapat segera dimunaqsyahkan. Atas perhatiannya kami ucapkan terima kasih.} \\
-  		
-  		\textit{Wassalamu'alaikum wr. wb.}
-  		\vspace{2em}
-  		\begin{center}
-  		\begin{singlespace}
-  		\begin{flushright}
-  		
-    		\begin{tabular}{cccc}
-      		& & \@city, \@approvaldate \\
-      		& & Pembimbing \\
-      		\vspace{1cm} & \vspace{1cm} & \vspace{1cm}\\
-      		& &
-      		\textbf{\underline{\@firstsupervisor}} \\
-      		& & \bfseries NIP. \@firstnip    
-    	\end{tabular}
-  		\end{flushright}
+   \begin{singlespace}
+      \justify
+      {Hal \hspace*{1.3em} : Permohonan} \\
+      {Lamp \hspace*{0.5em} : -} \\
+      \\
+      {Kepada} \\
+      {Yth. Dekan \@faculty} \\
+      {\shortuniversity} {\@city} \\
+      {di \@city} \\
+      
+      \textit{Assalamu'alaikum wr. wb} \\
+      \setlength{\parindent}{1.5em}
+      \par Setelah membaca, meneliti, memberikan petunjuk dan mengoreksi serta mengadakan perbaikan seperlunya, maka kami selaku pembimbing berpendapat bahwa skripsi Saudara: \\
+      
+      \par Nama \hspace*{1.6cm} : \@fullname
+      \par NIM \hspace*{1.8cm} : \@idnum
+      \par Judul Skripsi \hspace*{0.4cm} : \@titleind \\
+      
+      \setlength{\parindent}{0em}
+      sudah dapat diajukan kembali kepada Program Studi {\@dept} {\@faculty} {\@university} {\@city} sebagai salah satu syarat untuk memperoleh gelar Sarjanan Strata Satu dalam \@dept.
+      
+      \vspace{1em}
+      \setlength{\parindent}{1.5em}
+      \par{Dengan ini kami mengharap agar skripsi/tugas akhir Saudara tersebut di atas dapat segera dimunaqsyahkan. Atas perhatiannya kami ucapkan terima kasih.} \\
+      
+      \textit{Wassalamu'alaikum wr. wb.}
+      \vspace{2em}
+      \begin{center}
+      \begin{singlespace}
+      \begin{flushright}
+      
+        \begin{tabular}{cccc}
+          & & \@city, \@approvaldate \\
+          & & Pembimbing \\
+          \vspace{1cm} & \vspace{1cm} & \vspace{1cm}\\
+          & &
+          \textbf{\underline{\@firstsupervisor}} \\
+          & & \bfseries NIP. \@firstnip    
+      \end{tabular}
+      \end{flushright}
     \end{singlespace}
     \end{center}
-  	\end{singlespace}
+    \end{singlespace}
   \end{flushleft}
 \addcontentsline{toc}{chapter}{\approvalname}
 }
@@ -357,9 +349,8 @@
   \begin{singlespace}
   Skripsi ini saya persembahkan untuk:
   \begin{itemize}
-  	\item Bapak dan Ibu, blablabla
-  	\item Teman
-  	\item Apapun
+    \item Alm. Bapak, Ayah, dan Ibu orang tua peneliti, yang telah membesarkan dan mendidik, memberikan banyak pelajaran serta memberikan dukungan dan doa kepada peneliti.
+    \item Rekan sekaligus keluarga KKN Kelompok 300 Fudzi, Asror, Harist, Fakhrul, Rira, Risma, Alfi, dan Nida yang telah memberikan banyak pelajaran berharga selama proses pengabdian di masyarakat. Khususnya Harist \textit{yang bagus nek dewe}.
   \end{itemize}
   \end{singlespace}
 \addcontentsline{toc}{chapter}{\acknowledgmentname}
