@@ -81,7 +81,7 @@
 %Define page numbering in the first chapter
 %------------------------------------------------------------
 \def\ps@chapterheading{%
-  \let\@evenhead\@empty\let\@oddhead\@empty
+\let\@evenhead\@empty\let\@oddhead\@empty
   \def\@oddfoot{\hfil\thepage\hfil}%
   \def\@evenfoot{\hfil\thepage\hfil}
   }
@@ -108,19 +108,19 @@
   \@afterindenttrue %Indent the 1st paragraph
   \secdef\@chapter\@schapter}
 \renewcommand{\@makechapterhead}[1]{%
-  {\parindent \z@ \centering \normalfont
-    \ifnum \c@secnumdepth >\m@ne
-        \large\bfseries \@chapapp\space \thechapter
-        \par\nobreak
-        \vskip 5\p@
-    \fi
-    \interlinepenalty\@M
-    \large \bfseries #1\par\nobreak
-    \vskip 20\p@
-    }}
+{\parindent \z@ \centering \normalfont
+\ifnum \c@secnumdepth >\m@ne
+\large\bfseries \@chapapp\space \thechapter
+\par\nobreak
+\vskip 5\p@
+\fi
+\interlinepenalty\@M
+\large \bfseries #1\par\nobreak
+\vskip 20\p@
+}}
 \renewcommand{\@makeschapterhead}[1]{%
-  {\parindent \z@ \centering \normalfont
-    \interlinepenalty\@M \large \bfseries #1\par\nobreak \vskip 20\p@ }}
+{\parindent \z@ \centering \normalfont
+\interlinepenalty\@M \large \bfseries #1\par\nobreak \vskip 20\p@ }}
 %\renewcommand{\section}{\@startsection {section}{1}{\z@}%
 %                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
 %                                   {2.3ex \@plus.2ex}%
@@ -141,15 +141,15 @@
                                     {3.25ex \@plus1ex \@minus.2ex}%
                                     {-1em}%
                                     {\normalfont\normalsize\bfseries}}
-\renewcommand{\paragraph}{\subparagraph}
+                                    \renewcommand{\paragraph}{\subparagraph}
 
-\@addtoreset {equation}{chapter}
-\renewcommand\theequation
-  {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@equation}
-\renewcommand \thefigure
-     {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@figure}
-\renewcommand \thetable
-     {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@table}
+                                    \@addtoreset {equation}{chapter}
+                                    \renewcommand\theequation
+                                    {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@equation}
+                                    \renewcommand \thefigure
+                                    {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@figure}
+                                    \renewcommand \thetable
+                                    {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@table}
 
 %------------------------------------------------------------
 %Redefine caption names
@@ -210,9 +210,9 @@
 \newcommand{\examdate}[1]{\gdef\@examdate{#1}}
 \newcommand{\approvaldate}[1]{\gdef\@approvaldate{#1}}
 \newcommand{\@examdate}{\number\day~\ifcase\month\or
-    Januari\or Pebruari\or Maret\or April\or Mei\or Juni\or
-    Juli\or Agustus\or September\or Oktober\or Nopember\or Desember\fi
-    \space \number\year}
+Januari\or Pebruari\or Maret\or April\or Mei\or Juni\or
+Juli\or Agustus\or September\or Oktober\or Nopember\or Desember\fi
+\space \number\year}
 \newcommand{\degree}[1]{\gdef\@degree{#1}}
 \newcommand{\@degree}{}
 \newcommand{\yearsubmit}[1]{\gdef\@yearsubmit{#1}}
@@ -233,113 +233,154 @@
 \newcommand{\@secondnip}{}
 
 %------------------------------------------------------------
+%Define Proposal cover in Indonesian
+%------------------------------------------------------------
+\def\coverProposal{%
+  \thispagestyle{empty}%
+  \pagenumbering{roman}
+  \setcounter{page}{1}
+  \begin{center}
+  \begin{singlespace}
+  \fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries{Proposal Penelitian Skripsi}}\par\nobreak
+  \fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@titleind}\par\nobreak
+  \vspace{1.0cm}
+  {Diajukan sebagai salah satu syarat untuk mendapatkan gelar Strata Satu} \\
+  \vspace{1.0cm}
+  {Program Studi \@dept}
+  \vspace{1.0cm}
+  \vfill
+  \includegraphics[width=0.4\textwidth]{images/logouin.png}
+  \vfill
+  \vspace{0.5cm}
+  {\normalfont
+  \bfseries Diajukan oleh:\\
+  \vspace{0.5em}
+  \bfseries{\@fullname}\\
+  \vspace{0.5em}
+  \MakeUppercase{\normalfont\bfseries \@idnum}}\\
+  \vspace{1.0cm}
+  {\normalfont 
+  \MakeUppercase{\normalfont\bfseries Program Studi \@dept}\\
+  \vspace{0.5em}
+  \MakeUppercase{\normalfont\bfseries\@faculty} \\ 
+  \vspace{0.5em}         
+  \MakeUppercase{\normalfont\bfseries\@university}\\
+  \vspace{0.5em}
+  \MakeUppercase{\normalfont\bfseries\@city}\\
+  \vspace{0.3cm}
+  {\normalfont\bfseries\@yearsubmit}}\\
+  \end{singlespace}
+  \end{center}
+  }
+
+%------------------------------------------------------------
 %Define cover in Indonesian
 %------------------------------------------------------------
 \def\cover{%
   \thispagestyle{empty}%
   \pagenumbering{roman}
   \setcounter{page}{1}
-    \begin{center}
-      \begin{singlespace}
-      \fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@titleind}\par\nobreak
-      \vspace{1.0cm}
-      \MakeUppercase{\normalfont Skripsi}\\
-      \vspace{0.5cm}
-      {Untuk memenuhi persyaratan mencapai derajat Strata Satu} \\
-      \vspace{1.0cm}
-      {Program Studi \@dept}
-      \vspace{1.0cm}
-       \vfill
-       \includegraphics[width=0.4\textwidth]{images/logouin.png}
-       \vfill
-       \vspace{0.5cm}
-       {\normalfont
-        \bfseries Diajukan oleh:\\
-        \vspace{0.5em}
-        \bfseries{\@fullname}\\
-        \vspace{0.5em}
-        \MakeUppercase{\normalfont\bfseries \@idnum}}\\
-       \vspace{1.0cm}
-       {\normalfont 
-         \MakeUppercase{\normalfont\bfseries Program Studi \@dept}\\
-         \vspace{0.5em}
-         \MakeUppercase{\normalfont\bfseries\@faculty} \\ 
-    \vspace{0.5em}         
-         \MakeUppercase{\normalfont\bfseries\@university}\\
-         \vspace{0.5em}
-         \MakeUppercase{\normalfont\bfseries\@city}\\
-         \vspace{0.3cm}
-         {\normalfont\bfseries\@yearsubmit}}\\
-      \end{singlespace}
-      \end{center}
-}
+  \begin{center}
+  \begin{singlespace}
+  \fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@titleind}\par\nobreak
+  \vspace{1.0cm}
+  \MakeUppercase{\normalfont Skripsi}\\
+  \vspace{0.5cm}
+  {Untuk memenuhi persyaratan mencapai derajat Strata Satu} \\
+  \vspace{1.0cm}
+  {Program Studi \@dept}
+  \vspace{1.0cm}
+  \vfill
+  \includegraphics[width=0.4\textwidth]{images/logouin.png}
+  \vfill
+  \vspace{0.5cm}
+  {\normalfont
+  \bfseries Diajukan oleh:\\
+  \vspace{0.5em}
+  \bfseries{\@fullname}\\
+  \vspace{0.5em}
+  \MakeUppercase{\normalfont\bfseries \@idnum}}\\
+  \vspace{1.0cm}
+  {\normalfont 
+  \MakeUppercase{\normalfont\bfseries Program Studi \@dept}\\
+  \vspace{0.5em}
+  \MakeUppercase{\normalfont\bfseries\@faculty} \\ 
+  \vspace{0.5em}         
+  \MakeUppercase{\normalfont\bfseries\@university}\\
+  \vspace{0.5em}
+  \MakeUppercase{\normalfont\bfseries\@city}\\
+  \vspace{0.3cm}
+  {\normalfont\bfseries\@yearsubmit}}\\
+  \end{singlespace}
+  \end{center}
+  }
 
 %------------------------------------------------------------
 %Approval Page
 %------------------------------------------------------------
 
 \def\approvalpage{%
-  {
-  \cleardoublepage
-  \let\clearpage\relax
-  \begin{flushleft}
-  \begin{tabular}{cccc}
-  \includegraphics[width=0.05\textwidth]{images/logouin.png} &
-  \textbf\@university &
-  \includegraphics[width=0.1\textwidth]{images/logotuv.jpg} &
-  \textbf\approvalnumber  
-  \end{tabular}
-  \vspace{1cm}
-  \end{flushleft}
+{
+\cleardoublepage
+\let\clearpage\relax
+\begin{flushleft}
+\begin{tabular}{cccc}
+\includegraphics[width=0.05\textwidth]{images/logouin.png} &
+\textbf\@university &
+\includegraphics[width=0.1\textwidth]{images/logotuv.jpg} &
+\textbf\approvalnumber  
+\end{tabular}
+\vspace{1cm}
+\end{flushleft}
   \chapter*{\underline\approvalname}%
   }
   \begin{flushleft}
-   \begin{singlespace}
-      \justify
-      {Hal \hspace*{1.3em} : Permohonan} \\
-      {Lamp \hspace*{0.5em} : -} \\
-      \\
-      {Kepada} \\
-      {Yth. Dekan \@faculty} \\
-      {\shortuniversity} {\@city} \\
-      {di \@city} \\
-      
-      \textit{Assalamu'alaikum wr. wb} \\
-      \setlength{\parindent}{1.5em}
-      \par Setelah membaca, meneliti, memberikan petunjuk dan mengoreksi serta mengadakan perbaikan seperlunya, maka kami selaku pembimbing berpendapat bahwa skripsi Saudara: \\
-      
-      \par Nama \hspace*{1.6cm} : \@fullname
-      \par NIM \hspace*{1.8cm} : \@idnum
-      \par Judul Skripsi \hspace*{0.4cm} : \@titleind \\
-      
-      \setlength{\parindent}{0em}
-      sudah dapat diajukan kembali kepada Program Studi {\@dept} {\@faculty} {\@university} {\@city} sebagai salah satu syarat untuk memperoleh gelar Sarjanan Strata Satu dalam \@dept.
-      
-      \vspace{1em}
-      \setlength{\parindent}{1.5em}
-      \par{Dengan ini kami mengharap agar skripsi/tugas akhir Saudara tersebut di atas dapat segera dimunaqsyahkan. Atas perhatiannya kami ucapkan terima kasih.} \\
-      
-      \textit{Wassalamu'alaikum wr. wb.}
-      \vspace{2em}
-      \begin{center}
-      \begin{singlespace}
-      \begin{flushright}
-      
-        \begin{tabular}{cccc}
-          & & \@city, \@approvaldate \\
-          & & Pembimbing \\
-          \vspace{1cm} & \vspace{1cm} & \vspace{1cm}\\
-          & &
-          \textbf{\underline{\@firstsupervisor}} \\
-          & & \bfseries NIP. \@firstnip    
-      \end{tabular}
-      \end{flushright}
-    \end{singlespace}
-    \end{center}
-    \end{singlespace}
+  \begin{singlespace}
+  \justify
+  {Hal \hspace*{1.3em} : Permohonan} \\
+  {Lamp \hspace*{0.5em} : -} \\
+  \\
+  {Kepada} \\
+  {Yth. Dekan \@faculty} \\
+  {\shortuniversity} {\@city} \\
+  {di \@city} \\
+  
+  \textit{Assalamu'alaikum wr. wb} \\
+  \setlength{\parindent}{1.5em}
+  \par Setelah membaca, meneliti, memberikan petunjuk dan mengoreksi serta mengadakan perbaikan seperlunya, maka kami selaku pembimbing berpendapat bahwa skripsi Saudara: \\
+  
+  \par Nama \hspace*{1.6cm} : \@fullname
+  \par NIM \hspace*{1.8cm} : \@idnum
+  \par Judul Skripsi \hspace*{0.4cm} : \@titleind \\
+  
+  \setlength{\parindent}{0em}
+  sudah dapat diajukan kembali kepada Program Studi {\@dept} {\@faculty} {\@university} {\@city} sebagai salah satu syarat untuk memperoleh gelar Sarjanan Strata Satu dalam \@dept.
+  
+  \vspace{1em}
+  \setlength{\parindent}{1.5em}
+  \par{Dengan ini kami mengharap agar skripsi/tugas akhir Saudara tersebut di atas dapat segera dimunaqsyahkan. Atas perhatiannya kami ucapkan terima kasih.} \\
+  
+  \textit{Wassalamu'alaikum wr. wb.}
+  \vspace{2em}
+  \begin{center}
+  \begin{singlespace}
+  \begin{flushright}
+  
+  \begin{tabular}{cccc}
+  & & \@city, \@approvaldate \\
+  & & Pembimbing \\
+  \vspace{1cm} & \vspace{1cm} & \vspace{1cm}\\
+  & &
+  \textbf{\underline{\@firstsupervisor}} \\
+  & & \bfseries NIP. \@firstnip    
+  \end{tabular}
+  \end{flushright}
+  \end{singlespace}
+  \end{center}
+  \end{singlespace}
   \end{flushleft}
-\addcontentsline{toc}{chapter}{\approvalname}
-}
+  \addcontentsline{toc}{chapter}{\approvalname}
+  }
 
 %------------------------------------------------------------
 %Acknowlegment
@@ -353,16 +394,16 @@
     \item Rekan sekaligus keluarga KKN Kelompok 300 Fudzi, Asror, Harist, Fakhrul, Rira, Risma, Alfi, dan Nida yang telah memberikan banyak pelajaran berharga selama proses pengabdian di masyarakat. Khususnya Harist \textit{yang bagus nek dewe}.
   \end{itemize}
   \end{singlespace}
-\addcontentsline{toc}{chapter}{\acknowledgmentname}
-}
+  \addcontentsline{toc}{chapter}{\acknowledgmentname}
+  }
 
 %------------------------------------------------------------
 %Preface
 %------------------------------------------------------------
 \def\preface{%
   \chapter*{\prefacename}%
-\addcontentsline{toc}{chapter}{\prefacename}
-}
+  \addcontentsline{toc}{chapter}{\prefacename}
+  }
 
 %------------------------------------------------------------
 %Nomenclature
@@ -372,8 +413,8 @@
   \thispagestyle{plain}
   %\chapter*{\nomenclaturename}%
   %\printglossary
-\addcontentsline{toc}{chapter}{\nomenclaturename}
-}
+  \addcontentsline{toc}{chapter}{\nomenclaturename}
+  }
 
 %------------------------------------------------------------
 %Redefine Abstract in Indonesian
@@ -384,27 +425,27 @@
   {\parindent \z@ \centering \normalfont
   %{\large\textbf{\abstractname}} \\
   \vspace{1.0cm}
-    }
+  }
   \begin{singlespacing}%
   \vskip 20\p@
   \addcontentsline{toc}{chapter}{\abstractname}
-}
-\def\endabstractind{\par\vfil\null\end{singlespacing}}
+  }
+  \def\endabstractind{\par\vfil\null\end{singlespacing}}
 
 %------------------------------------------------------------
 %Redefine Abstract in English
 %------------------------------------------------------------
 \def\abstracteng{%
-  \clearpage\thispagestyle{chapterheading}\selectlanguage{english}
+\clearpage\thispagestyle{chapterheading}\selectlanguage{english}
   \chapter*{\abstractname}%
   {\parindent \z@ \centering \normalfont
   %{\large\textbf{\abstractname}} \\
   \vspace{1.0cm}
-    }
+  }
   \begin{singlespacing}%
   \vskip 20\p@
   \addcontentsline{toc}{chapter}{\abstractname}
-}
+  }
 \def\endabstracteng{\par\vfil\null\end{singlespacing}%
 \selectlanguage{bahasa}\clearpage\pagenumbering{arabic}\setcounter{page}{1}}
 

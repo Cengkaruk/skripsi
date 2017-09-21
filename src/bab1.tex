@@ -1,68 +1,56 @@
-%!TEX root = ./template-skripsi.tex
+%!TEX root = ../skripsi.tex
 %-------------------------------------------------------------------------------
 % 								BAB I
 % 							LATAR BELAKANG
 %-------------------------------------------------------------------------------
-
+\begin{spacing}{2}
 \chapter{LATAR BELAKANG}
 
 \section{Latar Belakang Masalah}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.\cite{wibowo2013wireless,Raluca2008}.
+Media massa adalah alat yang digunakan dalam penyampaian pesan-pesan dari sumber kepada khalayak (menerima) dengan menggunakan alat-alat komunikasi mekanis seperti surat kabar, film, radio, TV.\cite{Hafied2005}. Pada perkembangannya, media massa mulai menggunakan teknologi informasi sebagai perantara yang memungkinkan publik berinteraksi lebih cepat dalam mengabarkan berita.\cite{maulana2016}. Ini ditandai dengan munculnya berbagai situs berita milik media massa yang dapat diakses menggunakan perangkat komputer maupun mobile.
+
+Kebutuhan mengakses berita melalui media perangkat mobile meningkat sesuai dengan hasil riset The Pew Research Center yang menyatakan bahwa setengah dari pengguna smartphone menggunakan perangkatnya untuk mengakses berita pada tahun 2011.\cite{journalism2012}. Hal ini memperlihatkan bahwa pembaca berita berbasis mobile (mobile news) mungkin mengikuti berita secara berkala. Selain itu, pembaca berita berbasis mobile memiliki pola penggunaan media dan preferensi berita tertentu.\cite{sylvia2012}. Seperti dengan cara mengakses langsung berita tertentu melalui situs atau aplikasi terkait.\cite{journalism2012}.
+
+Melihat perkembangan tersebut, maka sebuah media massa sudah seharusnya memiliki aplikasi berita mobile guna melayani kebutuhan pembaca. Berbagai media massa ternama seperti NYTimes, Wall Street Journal atau media massa lokal seperti Kompas, Detik, dan beberapa media massa lain telah mengembangkan aplikasi berita berbasis mobile. Namun pada kenyataannya beberapa aplikasi mobile yang dimiliki media massa tersebut sering mengalami masalah dalam penggunaannya, seperti masalah yang sering terjadi pada aplikasi mobile milik NYTimes.\cite{martin2011}.
+
+Masalah penggunaan yang dimaksud adalah masalah teknis yang sering terjadi dari aplikasi mobile. Penyebab masalah teknis ini sering dilakukan pada proses pengembangan, seperti tidak melakukan proses pengujian yang tepat.\cite{shiv2015}.
+
+Proses pengujian dalam pengembangan tidak lepas dari metode pengembangan yang digunakan. Pada aplikasi berbasis \emph{mobile} metode pengembangan dengan sistem dan pendekatan berbasis proses yang intensif (\emph{proccess-intensive}) berubah menjadi lebih menggunakan pendekatan berbasis \emph{agile} atau proses yang lebih lincah. \emph{Test Driven Development} merupakan salah satu metode pengembangan yang masuk dalam kategori \emph{agile} yang paling sering digunakan.\cite{wasserman2010}.
+
+Dalam studi kasus yang dilakukan oleh IBM Corporation dan North Carolina State University ditemukan bahwa kode sumber yang dikembangkan dengan metode \emph{Test Driven Development} menunjukan selama pengujian verifikasi dan urutan (\emph{regression}), 40\% lebih sedikit mengalami masalah daripada aplikasi yang dikembangkan dengan cara yang lebih tradisional.\cite{laurie2003}
+
+Guna dapat mengembangkan aplikasi mobile yang lebih sedikit mengalami masalah, maka penulis mengangkat penelitian ini dengan judul "Rancang Bangun Aplikasi Berita Berbasis Mobile Dengan Metode Test Driven Development".
 
 \section{Rumusan Masalah}
-Habeo perfecto in sea. Ea deleniti gloriatur pri, paulo mediocrem incorrupte sea ei. Ad mollis scripta per. Incorrupte sadipscing ne mel. Mel ex nonumy malorum epicurei. Ne per tota mollis suscipit. Ullum labitur vim ut, ea dicit eleifend dissentias sit. Duis praesent expetenda ne sed. Sit et labitur albucius elaboraret. Ceteros efficiantur mei ad. Hendrerit vulputate democritum est at, quem veniam ne has, mea te malis ignota volumus.
-
+Rumusan permasalahan yang akan diselesaikan dalam penelitian ini yaitu:
+\begin{enumerate}
+  \item Bagaimana merancang bangun aplikasi berita yang nyaman dan stabil untuk pengguna pada perangkat \emph{mobile}.
+  \item Bagaimana menerapkan metode \emph{Test Driven Development} dalam merancang dan membangun aplikasi berbasis \emph{mobile}.
+\end{enumerate}
 
 \section{Batasan Masalah}
-Batasan masalah pada penelitian ini adalah:
+Batasan masalah yang akan dibahas pada penelitian ini sebagai berikut:
 \begin{enumerate}
-\item Penelitian ini difokuskan pada interoperabilitas beberapa \emph{vendor} WSN dan protokol Internet.
-\item Tipe WSN yang digunakan dalam penelitian ini dibatasi dua buah.
-\item Pengujian yang dilakukan hanya sebatas eksperimen dalam lingkup laboratorium.
-\item Purwarupa yang dihasilkan akan diimplementasikan pada sebuah \emph{Access Point} (AP).
+  \item Penelitian ini fokus pada implementasi metode \emph{test driven development}.
+  \item Objek yang dijadikan penelitian adalah aplikasi berita.
+  \item Teknologi atau sistem yang digunakan untuk mengelola berita tidak dibahas pada penelitian ini.
+  \item Aplikasi ini dibuat menggunakan kerangka kerja React Native.
+  \item Penelitian ini tidak membahas mengenai bahasa pemrograman, kerangka kerja, dan pustaka yang digunakan dalam pengembangan.
 \end{enumerate}
 
 
 \section{Tujuan Penelitian}
-Eros reprimique vim no. Alii legendos volutpat in sed, sit enim nemore labores no. No odio decore causae has. Vim te falli libris neglegentur, eam in tempor delectus dignissim, nam hinc dictas an.
+Sesuai dengan masalah yang telah dirumuskan, maka tujuan dari penelitian ini adalah menghasilkan aplikasi berbasis mobile yang dapat menyajikan berita menggunakan metode \emph{test driven development}.
+\begin{enumerate}
+  \item Menghasilkan aplikasi berbasis mobile untuk dapat menyajikan berita.
+  \item Dapat mengimplementasikan metode \emph{test driven development} kedalam sistem aplikasi berbasis \emph{mobile} yang dirancang.
+\end{enumerate}
 
 
 \section{Manfaat Penelitian}
-Pro omnium incorrupte ea. Elitr eirmod ei qui, ex partem causae disputationi nec. Amet dicant no vis, eum modo omnes quaeque ad, antiopam evertitur reprehendunt pro ut. Nulla inermis est ne. Choro insolens mel ne, eos labitur nusquam eu, nec deserunt reformidans ut. His etiam copiosae principes te, sit brute atqui definiebas id.
+Manfaat penelitian yang diharapkan dapat menyediakan Aplikasi Berita \emph{Mobile} untuk menyajikan berita kepada pengguna, guna kemudahan dalam mengakses informasi.
 
-Et affert civibus has. Has ne facer accumsan argumentum, apeirian hendrerit persequeris pro ex. Suscipit vivendum sensibus mea at, vim ei hinc numquam, at dicit timeam dissentiet mel. At patrioque intellegebat sea, error argumentum dissentias sea in.
-
-
-\section{Keaslian Penelitian}
-No per amet modo comprehensam, duo dolor dignissim ex, ancillae corrumpit intellegam vix te. Mel utinam signiferumque no, ex nec accusam accumsan. Et per inermis posidonium, qui et ornatus epicuri pertinax. In homero commodo usu, vel te habemus fuisset, id nec periculis sententiae efficiendi. Oblique sanctus intellegat at cum.
-
-
-\section{Sistematika Penulisan}
-\noindent
-\textbf{BAB I : PENDAHULUAN}
-
-Pada bab ini dijelaskan latar belakang, rumusan masalah, batasan, tujuan, manfaat, keaslian penelitian, dan sistematika penulisan.\\
-
-\noindent
-\textbf{BAB II : TINJAUAN PUSTAKA DAN LANDASAN TEORI}
-
-Pada bab ini dijelaskan teori-teori dan penelitian terdahulu yang digunakan sebagai acuan dan dasar dalam penelitian.\\
-
-\noindent
-\textbf{BAB III : METODOLOGI PENELITIAN}
-
-Pada bab ini dijelaskan metode yang digunakan dalam penelitian meliputi langkah kerja, pertanyaan penilitian, alat dan bahan, serta tahapan dan alur penelitian.\\
-
-\noindent
-\textbf{BAB IV : HASIL DAN PEMBAHASAN}
-
-Pada bab ini dijelaskan hasil penelitian dan pembahasannya.\\
-
-\noindent
-\textbf{BAB V : KESIMPULAN DAN SARAN}
-
-Pada bab ini ditulis kesimpulan akhir dari penelitian dan saran untuk pengembangan penelitian selanjutnya.\\
-
+\end{spacing}
 % Baris ini digunakan untuk membantu dalam melakukan sitasi
 % Karena diapit dengan comment, maka baris ini akan diabaikan
 % oleh compiler LaTeX.

@@ -1,0 +1,107 @@
+%-------------------------------------------------------------------------------
+% Proposal Skripsi
+%-------------------------------------------------------------------------------
+
+%Template pembuatan naskah skripsi.
+\documentclass{tif-uin-suka}
+
+%Untuk prefiks pada daftar gambar dan tabel
+\usepackage[titles]{tocloft}
+\renewcommand\cftfigpresnum{Gambar\  }
+\renewcommand\cfttabpresnum{Tabel\   }
+
+%Untuk hyperlink dan table of content
+\usepackage{hyperref}
+\newlength{\mylenf}
+\settowidth{\mylenf}{\cftfigpresnum}
+\setlength{\cftfignumwidth}{\dimexpr\mylenf+2em}
+\setlength{\cfttabnumwidth}{\dimexpr\mylenf+2em}
+
+%Untuk Bold Face pada Keterangan Gambar
+\usepackage[labelfont=bf]{caption}
+
+%Untuk caption dan subcaption
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{geometry}
+
+\usepackage{index}
+\def\Index#1{\def\x##1##2{\MakeUppercase{##1}{##2}}\textit{\x#1} \index{\x#1}} 
+
+
+%-----------------------------------------------------------------
+%Disini awal masukan untuk data proposal skripsi
+%-----------------------------------------------------------------
+\titleind{Rancang Bangun Aplikasi Berita Berbasis Mobile Dengan Metode Test Driven Development}
+
+\fullname{Aji Kisworo Mukti}
+
+\idnum{10651067}
+
+\approvaldate{6 September 2017}
+
+\def \createddate{6 September 2017}
+
+\degree{Sarjana Komputer}
+
+\yearsubmit{2017}
+
+\program{Teknik Informatika}
+
+\dept{Teknik Informatika}
+
+\firstsupervisor{Aulia Faqih Rifa'i}
+\firstnip{19860306 201101 1 009}
+
+\secondsupervisor{Nama Dosen 2}
+\secondnip{NIP Dosen 2}
+
+\def \approvalnumber{FM-UINSK-BM-06-03/R0}
+\def \shortuniversity{UIN Sunan Kalijaga}
+
+% Term untuk penulis, apakah "penulis", "penyusun" atau "peneliti" silakan ganti
+\def \writerlabel{peneliti}
+\def \writerlabelCap{Peneliti}
+
+\def \city{Yogyakarta}
+
+
+%-----------------------------------------------------------------
+%Disini akhir masukan untuk data proposal skripsi
+%-----------------------------------------------------------------
+
+\begin{document}
+
+\coverProposal
+
+%-----------------------------------------------------------------
+
+%-----------------------------------------------------------------
+%Disini awal masukan untuk Bab
+%-----------------------------------------------------------------
+\include{src/bab1}
+
+\include{src/bab2}
+
+\include{src/bab3}
+
+%-----------------------------------------------------------------
+%Disini akhir masukan Bab
+%-----------------------------------------------------------------
+
+
+%-----------------------------------------------------------------
+% Disini awal masukan untuk Daftar Pustaka
+% - Daftar pustaka diambil dari file .bib yang ada pada folder ini
+%   juga.
+% - Untuk memudahkan dalam memanajemen dan menggenerate file .bib
+%   gunakan reference manager seperti Mendeley, Zotero, EndNote,
+%   dll.
+%-----------------------------------------------------------------
+\bibliography{IEEEabrv,src/daftar-pustaka}
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+%-----------------------------------------------------------------
+%Disini akhir masukan Daftar Pustaka
+%-----------------------------------------------------------------
+
+\end{document}
