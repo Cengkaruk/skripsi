@@ -1,36 +1,109 @@
-%!TEX root = ./template-skripsi.tex
+%!TEX root = ../skripsi.tex
 %-------------------------------------------------------------------------------
 %                            BAB II
 %               TINJAUAN PUSTAKA DAN DASAR TEORI
 %-------------------------------------------------------------------------------
-
+\begin{spacing}{2}
 \chapter{TINJAUAN PUSTAKA DAN DASAR TEORI}                
 
 \section{Tinjauan Pustaka}
-  Berdasarkan penelitian 
+  Berdasarkan penelitian Pew Research Center (2012) yang berjudul "\emph{Mobile Devices and News Consumption: Some Good Signs for Journalism}" menyatakan bahwa pembaca menghabiskan waktu lebih lama di aplikasi berita pada perangkat \emph{mobile}, mengunjungi lebih banyak halaman, dan frekuensi kembali mengunjungi lebih banyak dibandikan pada perangkat komputer biasa.\cite{journalism2012}. Pernyataan tersebut diperkuat oleh penelitian Sylvia Chan-Olmsted, Hyejoon Rim1, dan Amy Zerba yang menyimpulkan bahwa faktor-faktor yang mempengaruhi waktu adopsi pengguna mungkin berbeda dari yang mempengaruhi tingkat penggunaan atau kemauannya untuk membayar konten. Gagasan ini terutama berlaku untuk konsumsi berita melalui platform media "hibrida" seperti berita mobile.\cite{sylvia2012}. Dengan demikian sudah layak untuk diperhitungkan jika sebuah media berita harus memiliki sebuah aplikasi berita untuk pembaca. Namun, untuk memanfaatkan kesempatan itu sebuah media harus mengerjakannya lebih baik dibandingkan pada lingkungan \emph{desktop} dalam kecepatan memahami perilaku pengguna dan pengembangan teknologi.\cite{journalism2012}.
+
+  Pada sisi pengembangan teknologi tidak lepas dari metode yang digunakan dalam pengembangan aplikasi berbasis mobile. Seperti pada penelitian Novri Asyara Mahyudanil yang menggunakan metode pengembangan \emph{extreme programming} karena mengutamakan keterlibatan pengguna dalam mengembangkan perangkat lunak dan lebih mengedepankan hasil daripada dokumentasi.\cite{commerce2014}. Serta dapat memberikan kemudahan dalam memperkirakan kemampuan pengembangan perangkat lunak yang dikembangkan, menurut Hidayat Rizal, Satriyo Adhy, dan Panji Wisnu Wirawan.\cite{mlearning}.
+
+  Selain itu metode pengembangan \emph{extreme programming} juga digunakan oleh beberapa peneliti lain seperti Indra Faisol Alim dalam "Rancang Bangun Aplikasi Rencana Anggaran Biaya (RAB) Untuk Bangunan Sederhana Di Yogyakarta Berbasis Android Dengan Metode Extreme Programming", dan Qoriani Widayati dan Usman Ependi dalam "Rancang Bangun Aplikasi Kamus Istilah Akutansi Pada Smartphone Dengan Metode Extreme Programming".\cite{rab2016}\cite{kamus-akuntansi2014}. Namun pada kedua penelitian tersebut tidak disimpulkan bagaimana proses serta seberapa optimal hasil pengujian aplikasi dengan menggunakan metode pengembangan \emph{extreme programming}.
 
 \section{Landasan Teori}
-  \subsection{\LaTeX}
-    Ne per tota mollis suscipit. Ullum labitur vim ut, ea dicit eleifend dissentias sit. Duis praesent expetenda ne sed. Sit et labitur albucius elaboraret. Ceteros efficiantur mei ad. Hendrerit vulputate democritum est at, quem veniam ne has, mea te malis ignota volumus.
+  \subsection{Software Design Pattern}
+    Dua hal yang wajib dipertimbangkan dalam pembuatan perangkat lunak adalah hal-hal yang besifat teknis yang berhubungan dengan arsitektur dan perancangan sistem yang lebih bersifat umum. Permasalahan mengenai kedua hal tersebut selalu ada pada pembuatan perangkat lunak sejak awal perkembangan komputer.
 
-    Eros reprimique vim no. Alii legendos volutpat in sed, sit enim nemore labores no. No odio decore causae has. Vim te falli libris neglegentur, eam in tempor delectus dignissim, nam hinc dictas an.
+    Tujuan dari merancang kedua hal ini adalah agar perangkat lunak dapat berjalan secara efisien dan mampu menghadapi perubahan-perubahan yang ada.
 
-    Pro omnium incorrupte ea. Elitr eirmod ei qui, ex partem causae disputationi nec. Amet dicant no vis, eum modo omnes quaeque ad, antiopam evertitur reprehendunt pro ut. Nulla inermis est ne. Choro insolens mel ne, eos labitur nusquam eu, nec deserunt reformidans ut. His etiam copiosae principes te, sit brute atqui definiebas id.
+    Hambatan hambatan yang sering dijumpai dalam pengembangan perangkat lunak dalam hal ini antara lain :
+    \begin{enumerate}
+      \item Kebutuhan yang akan datang sering tidak bisa dipahami dan merupakan sebuah hal yang sering sekali berubah.
+      \item Usaha untuk menggunakan kembali suatu komponen sering kali berujung melibatkan komponen-komponen yang sebenarnya tidak bisa digunakan kembali dan sering kali gagal untuk dilakukan.
+      \item Sering sekali terjadi, programmer dan sistem analis kehilangan gambaran secara umum tentang apa yang dimaksud dengan kebutuhan yang akan datang.
+      \item Para pengembang cenderung melihat permasalahan ke arah permasalahan kode. Pengembang gagal melihat bahwa penyelesaian masalah melalui perancangan dan pengujian adalah sesuatu yang patut dipertimbangkan dan merupakan jalur yang tepat.
+    \end{enumerate}
 
+    Atas dasar permasalah inilah pada proses mengembangkan perangkat lunak aplikasi \emph{mobile} dalam penelitian ini penulis menggunakan salah satu konsep arsitektur perangkat lunak yang disebut dengan Reactive Programming.
 
-      \begin{figure}[H]
-        \centering
-          \includegraphics{images/wsn}
-          \caption{Jaringan sensor nirkabel.}
-          \label{wsn}
-      \end{figure}
+    Reactive Programming adalah paradikma pemrograman \emph{asynchronous} yang berkonsentrasi pada aliran data (\emph{data streams}) dan penyebaran perubahan (\emph{propagation of changes}). Contoh, pada arsitektur Model View Controller, Reactive Programming dapat memfasilitasi perubahan dalam model yang otomatis akan diteruskan kepada view yang bersangkutan, dan sebaliknya.
 
+    Arsitektur ini telah tersedia dalam sebuah \emph{framework mobile} bernama React Native yang akan digunakan oleh penulis dalam mengembangkan perangkat lunak \emph{mobile}.
 
-  \subsection{Sublime Text}
-    Et affert civibus has. Has ne facer accumsan argumentum, apeirian hendrerit persequeris pro ex. Suscipit vivendum sensibus mea at, vim ei hinc numquam, at dicit timeam dissentiet mel. At patrioque intellegebat sea, error argumentum dissentias sea in.
+    Dengan menggunakan konsep ini komponen-komponen perangkat lunak lebih terorganisir, sehingga membantu dalam proses pengembangan dan penyesuaian perangkat lunak dengan perubahan yang mungkin terjadi.
 
-    Quo no atqui omnesque intellegat, ne nominavi argumentum quo. Eum ei purto oporteat dissentiet, soleat utamur an sit. Et assum dicam interpretaris quo. Cetero alterum ea vel, no possit alterum utroque nec. His fuisset quaestio ad. Has eu tritani incorrupte consequuntur, esse aliquip nec ne.
+  \subsection{Software Development Life Cycle}
+    \emph{Software Development Life Cycle} (SDLC) adalah proses pembuatan dan pengubahan sistem serta model dan metodologi yang digunakan untuk mengembangkan sistem-sistem tersebut. Konsep ini umumnya merujuk pada sistem komputer atau informasi. SDLC juga merupakan pola yang diambil untuk mengembangkan sistem perangkat lunak, yang terdiri dari dari tahap- tahap, rencana, analisa, desain, implementasi, uji coba dan pengelolaan.
 
+    Perangkat lunak yang dikembangkan berdasarkan Systems Development Life Cycle akan menghasilkan sistem dengan kualitas yang tinggi, memenuhi harapan penggunanya, tepat dalam waktu dan biaya, bekerja dengan efektif dan efisien dalam infrastruktur teknologi informasi yang ada atau yang direncanakan, serta murah dalam perawatan dan pengembangan lebih lanjut.
+
+  \subsection{Agile Software Development}
+    \emph{Agile Software Development} adalah metodologi manajemen pembangunan perangkat lunak yang mempunyai tingkat adaptasi yang tinggi terhadap perubahan yang terjadi di setiap elemen-elemennya. Salah satu ciri dari \emph{Agile Development} adalah adanya proses iterasi yang terus menerus dan evaluasi yang terus berjalan pada setiap proses yang dilewatinnya.
+
+    Beberapa jenis model pengembangan perangkat lunak \emph{agile} antara lain sebagai berikut :
+    \begin{enumerate}
+      \item Extreme Programming
+      \item Feature Driven Development
+      \item Lean Software Development
+      \item SCRUM
+    \end{enumerate}
+
+  \subsection{Extreme Programming}
+    \emph{Extreme Programming} adalah sebuah model yang terkenal lincah, menekankan kepuasan pelanggan untuk menciptakan perangkat lunak secara cepat, terampil, dan berkelanjutan. \emph{Extreme programming} mengandung beberapa nilai-nilai sebagai prinsip dasar yaitu \emph{communication}, \emph{simplicity}, \emph{feedback}, dan \emph{courage}.
+
+    Praktek dari model pengembangan \emph{extreme programming} antara lain :
+    \begin{enumerate}
+      \item Pair Programming
+      \item Planning Game
+      \item Test Driven Development
+      \item Whole Team
+    \end{enumerate}
+
+    Pada penelitian ini penulis akan menggunakan metode pengembangan \emph{agile} model \emph{extreme programming} dengan praktek \emph{test driven development}.
+
+  \subsection{Test Driven Development}
+    \emph{Test Driven Development} adalah proses pengembangan perangkat lunak yang bergantung pada pengulangan siklus pengembangan yang sangat singkat. Kebutuhan diubah menjadi kasus-kasus pengujian yang sangat spesifik, lalu perangkat lunak dikembangkan hanya untuk lolos uji dari syarat-syarat tersebut. Hal ini bertentangan dengan pengembangan perangkat lunak konvensional yang memungkinkan fitur untuk ditambahkan walaupun terbukti tidak memenuhi persyaratan dari kebutuhan.
+
+    Tidak seperti pengembangan konvensional, dengan model pengembangan \emph{test driven development} memungkinkan proses rencana, analisa, desain, implementasi, dan pengujian dilakukan secara bersamaan. Hal inilah yang menjadikan faktor pengembangan dengan model \emph{test driven development} memiliki kecepatan yang tinggi.
+
+    Perbandingan dari proses pengembangan konvensional dengan model \emph{test driven development} dapat dilihat pada tabel berikut.
+
+    \renewcommand{\arraystretch}{2}
+    \begin{table}[]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Step} & \textbf{Test Driven Development} & \textbf{Waterfall}       \\ \hline
+    Requirements  & User Stories                     & Functional Specification \\ \hline
+    Planning      & Incremental                      & Detailed                 \\ \hline
+    Design        & Metaphor                         & Detailed Design          \\ \hline
+    Build         & Continuous Integration           & Linear                   \\ \hline
+    Test          & Test First - Automated Tests     & Acceptance Testing       \\ \hline
+    Deploy        & Platform Specific                & Deployment Guides        \\ \hline
+    \end{tabular}
+    \caption{Tabel Perbandingan}
+    \label{my-label}
+    \end{table}
+
+  \subsection{User Stories}
+    \emph{User Stories} adalah model yang digunakan untuk melakukan pendataan kebutuhan (\emph{requirements elicitation}) pada metodologi \emph{test driven development}. Fungsinya adalah membuat estimasi waktu untuk \emph{release planning meeting}. Selain itu digunakan untuk mengakomodasi dokumen kebutuhan yang umumnya panjang. \emph{User Stories} ditulis oleh \emph{customer} sebagai sesuatu yang harus dilakukan oleh sistem untuk mereka.
+
+    Berbeda dengan \emph{use case}, dalam \emph{user stories} tidak terdapat detil alur kegiatan dalam suatu stories. Dalam tiap \emph{stories} hanya ditulis apa yang diinginkan oleh \emph{customer} untuk dapat dilakukan oleh sistem yang akan dikembangkan. Deskripsi keseluruhan dari masing-masing \emph{stories} itu sendiri sangat singkat, tidak lebih beberapa baris yang ditulis langsung oleh \emph{customer}.
+
+    Berikut merupakan contoh \emph{user stories} dengan kasus pada sistem \emph{elearning}:
+    \begin{enumerate}
+      \item Sebagai peserta, saya ingin melihat daftar mata kuliah terbaru yang tersedia sehingga saya bisa mengetahui daftar mata kuliah apa saja yang ditawarkan
+      \item Sebagai peserta, saya ingin mencari mata kuliah dengan memasukkan judul atau topik tertentu sehingga saya bisa menemukan kuliah yang mungkin saya minati
+      \item Sebagai peserta, saya ingin mendaftarkan diri di suatu mata kuliah tertentu sehingga saya bisa mengikuti pembelajaran di mata kuliah tersebut
+    \end{enumerate}
+
+  \subsection{Unit Testing}
+    \emph{Unit Testing} merupakan metode yang digunakan untuk melakukan pengujian perangkat lunak dimana masing-masing unit kode sumber, \emph{module}, prosedur penggunaan (\emph{usage procedures}), dan prosedur operasi (\emph{operating procedures}) diuji untuk menentukan apakah sesuai untuk digunakan. \emph{Unit} adalah bagian terkecil yang dapat diuji dari sebuah aplikasi. Dalam pemrograman berorientasi objek, \emph{unit} sering merupakan \emph{class} dan \emph{method}. \emph{Unit Testing} berbentuk sebuah kode pendek yang dibuat oleh pemrogram atau penguji \emph{white box} selama proses pengembangan.
+
+\end{spacing}
 % Baris ini digunakan untuk membantu dalam melakukan sitasi
 % Karena diapit dengan comment, maka baris ini akan diabaikan
 % oleh compiler LaTeX.

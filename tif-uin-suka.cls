@@ -237,7 +237,6 @@ Juli\or Agustus\or September\or Oktober\or Nopember\or Desember\fi
 %------------------------------------------------------------
 \def\coverProposal{%
   \thispagestyle{empty}%
-  \pagenumbering{roman}
   \setcounter{page}{1}
   \begin{center}
   \begin{singlespace}
