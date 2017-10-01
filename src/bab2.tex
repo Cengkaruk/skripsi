@@ -1,17 +1,21 @@
 %!TEX root = ../skripsi.tex
 %-------------------------------------------------------------------------------
 %                            BAB II
-%               TINJAUAN PUSTAKA DAN DASAR TEORI
+%               TINJAUAN PUSTAKA DAN LANDASAN TEORI
 %-------------------------------------------------------------------------------
 \begin{spacing}{2}
-\chapter{TINJAUAN PUSTAKA DAN DASAR TEORI}                
+\chapter{TINJAUAN PUSTAKA DAN LANDASAN TEORI}                
 
 \section{Tinjauan Pustaka}
   Berdasarkan penelitian Pew Research Center (2012) yang berjudul "\emph{Mobile Devices and News Consumption: Some Good Signs for Journalism}" menyatakan bahwa pembaca menghabiskan waktu lebih lama di aplikasi berita pada perangkat \emph{mobile}, mengunjungi lebih banyak halaman, dan frekuensi kembali mengunjungi lebih banyak dibandikan pada perangkat komputer biasa.\cite{journalism2012}. Pernyataan tersebut diperkuat oleh penelitian Sylvia Chan-Olmsted, Hyejoon Rim1, dan Amy Zerba yang menyimpulkan bahwa faktor-faktor yang mempengaruhi waktu adopsi pengguna mungkin berbeda dari yang mempengaruhi tingkat penggunaan atau kemauannya untuk membayar konten. Gagasan ini terutama berlaku untuk konsumsi berita melalui platform media "hibrida" seperti berita mobile.\cite{sylvia2012}. Dengan demikian sudah layak untuk diperhitungkan jika sebuah media berita harus memiliki sebuah aplikasi berita untuk pembaca. Namun, untuk memanfaatkan kesempatan itu sebuah media harus mengerjakannya lebih baik dibandingkan pada lingkungan \emph{desktop} dalam kecepatan memahami perilaku pengguna dan pengembangan teknologi.\cite{journalism2012}.
 
-  Pada sisi pengembangan teknologi tidak lepas dari metode yang digunakan dalam pengembangan aplikasi berbasis mobile. Seperti pada penelitian Novri Asyara Mahyudanil yang menggunakan metode pengembangan \emph{extreme programming} karena mengutamakan keterlibatan pengguna dalam mengembangkan perangkat lunak dan lebih mengedepankan hasil daripada dokumentasi.\cite{commerce2014}. Serta dapat memberikan kemudahan dalam memperkirakan kemampuan pengembangan perangkat lunak yang dikembangkan, menurut Hidayat Rizal, Satriyo Adhy, dan Panji Wisnu Wirawan.\cite{mlearning}.
+  Pada sisi pengembangan teknologi tidak lepas dari metode yang digunakan dalam pengembangan aplikasi berbasis mobile. Seperti pada penelitian Novri Asyara Mahyudanil yang berjudul "Rancang Bangun \emph{Mobile Commerce} Berbasis Android \emph{Smartphone} Dengan \emph{Extreme Programming}". Penelitian tersebut menggunakan metode pengembangan \emph{extreme programming} karena mengutamakan keterlibatan pengguna dalam mengembangkan perangkat lunak dan lebih mengedepankan hasil daripada dokumentasi.\cite{commerce2014}.
 
-  Selain itu metode pengembangan \emph{extreme programming} juga digunakan oleh beberapa peneliti lain seperti Indra Faisol Alim dalam "Rancang Bangun Aplikasi Rencana Anggaran Biaya (RAB) Untuk Bangunan Sederhana Di Yogyakarta Berbasis Android Dengan Metode Extreme Programming", dan Qoriani Widayati dan Usman Ependi dalam "Rancang Bangun Aplikasi Kamus Istilah Akutansi Pada Smartphone Dengan Metode Extreme Programming".\cite{rab2016}\cite{kamus-akuntansi2014}. Namun pada kedua penelitian tersebut tidak disimpulkan bagaimana proses serta seberapa optimal hasil pengujian aplikasi dengan menggunakan metode pengembangan \emph{extreme programming}.
+  Menurut Hidayat Rizal, Satrio Adhy, dan Panji Wisnu Wirawan dalam penelitiannya yang berjudul "Perancangan dan Pembuatan \emph{Mobile Learning} Interaktif Berbasis Android Dengan Metode \emph{Personal Extreme Programming}", Penerapan metode \emph{personal extreme programming} memberikan kemudahan dalam memperkirakan kemampuan pengembangan perangkat lunak yang dikembangkan. Hal tersebut ditunjukan pada \emph{burndown chart} yang dihasilkan pada penelitian tersebut.\cite{mlearning}.
+
+  Pada penelitian Indra Faisol Alim dalam "Rancang Bangun Aplikasi Rencana Anggaran Biaya (RAB) Untuk Bangunan Sederhana Di Yogyakarta Berbasis Android Dengan Metode \emph{Extreme Programming}" berhasil mengimplementasikan hasil analisa dari metode \emph{extreme programming} untuk membangun aplikasi tersebut. Dengan hasil aplikasi yang layak menggunakan metode tersebut menurut hasil dari pengujian aplikasi.\cite{rab2016}.
+
+  Dalam penelitian Qoriani Widayati dan Usman Ependi yang berjudul "Rancang Bangun Aplikasi Kamus Istilah Akutansi Pada \emph{Smartphone} dengan Metode \emph{Extreme Programming}". Sasaran dari \emph{extreme programming} adalah tim yang dibentuk berukuran kecil hingga medium, tidak perlu menggunakan tim yang berukuran besar. Hal ini dimaksudkan untuk menghadapi \emph{requirements} yang tidak jelas maupun terjadinya perubahan-perubahan \emph{requirements} yang sangat cepat. Kelebihan yang dimiliki \emph{extreme programming} dibandingkan dengan metode agile yang lain yaitu keperluan berubah dengan cepat, resiko tinggi dan ada proyek dengan tantangan yang baru, tim programmer sedikit, yaitu 2-10 orang, dan mampu mengotomatiskan tes.\cite{kamus-akuntansi2014}.
 
 \section{Landasan Teori}
   \subsection{Software Design Pattern}
@@ -68,25 +72,6 @@
     \emph{Test Driven Development} adalah proses pengembangan perangkat lunak yang bergantung pada pengulangan siklus pengembangan yang sangat singkat. Kebutuhan diubah menjadi kasus-kasus pengujian yang sangat spesifik, lalu perangkat lunak dikembangkan hanya untuk lolos uji dari syarat-syarat tersebut. Hal ini bertentangan dengan pengembangan perangkat lunak konvensional yang memungkinkan fitur untuk ditambahkan walaupun terbukti tidak memenuhi persyaratan dari kebutuhan.
 
     Tidak seperti pengembangan konvensional, dengan model pengembangan \emph{test driven development} memungkinkan proses rencana, analisa, desain, implementasi, dan pengujian dilakukan secara bersamaan. Hal inilah yang menjadikan faktor pengembangan dengan model \emph{test driven development} memiliki kecepatan yang tinggi.
-
-    Perbandingan dari proses pengembangan konvensional dengan model \emph{test driven development} dapat dilihat pada tabel berikut.
-
-    \renewcommand{\arraystretch}{2}
-    \begin{table}[]
-    \centering
-    \begin{tabular}{|l|l|l|}
-    \hline
-    \textbf{Step} & \textbf{Test Driven Development} & \textbf{Waterfall}       \\ \hline
-    Requirements  & User Stories                     & Functional Specification \\ \hline
-    Planning      & Incremental                      & Detailed                 \\ \hline
-    Design        & Metaphor                         & Detailed Design          \\ \hline
-    Build         & Continuous Integration           & Linear                   \\ \hline
-    Test          & Test First - Automated Tests     & Acceptance Testing       \\ \hline
-    Deploy        & Platform Specific                & Deployment Guides        \\ \hline
-    \end{tabular}
-    \caption{Tabel Perbandingan}
-    \label{my-label}
-    \end{table}
 
   \subsection{User Stories}
     \emph{User Stories} adalah model yang digunakan untuk melakukan pendataan kebutuhan (\emph{requirements elicitation}) pada metodologi \emph{test driven development}. Fungsinya adalah membuat estimasi waktu untuk \emph{release planning meeting}. Selain itu digunakan untuk mengakomodasi dokumen kebutuhan yang umumnya panjang. \emph{User Stories} ditulis oleh \emph{customer} sebagai sesuatu yang harus dilakukan oleh sistem untuk mereka.

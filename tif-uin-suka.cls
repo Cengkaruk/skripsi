@@ -89,7 +89,7 @@
 %------------------------------------------------------------
 %Redefine chapter and sections
 %------------------------------------------------------------
-\setcounter{secnumdepth}{2}
+\setcounter{secnumdepth}{3}
 \renewcommand \thepart {\@Roman\c@part}
 \renewcommand \thechapter {\@Roman\c@chapter}
 %\renewcommand \thesection {\@arabic\c@section.}
@@ -133,23 +133,23 @@
                                      {-3.25ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
                                      {\normalfont\normalsize\bfseries}}
-%\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\parindent}%
-%                                    {3.25ex \@plus1ex \@minus.2ex}%
-%                                    {-1em}%
-%                                    {\normalfont\normalsize\bfseries}}
 \renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
-                                    {3.25ex \@plus1ex \@minus.2ex}%
-                                    {-1em}%
-                                    {\normalfont\normalsize\bfseries}}
-                                    \renewcommand{\paragraph}{\subparagraph}
+                                      {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                      {1.5ex \@plus .2ex}%
+                                      {\normalfont\normalsize\bfseries}}
+% \renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
+%                                     {3.25ex \@plus1ex \@minus.2ex}%
+%                                     {-1em}%
+%                                     {\normalfont\normalsize\bfseries}}
+%                                     \renewcommand{\paragraph}{\subparagraph}
 
-                                    \@addtoreset {equation}{chapter}
-                                    \renewcommand\theequation
-                                    {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@equation}
-                                    \renewcommand \thefigure
-                                    {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@figure}
-                                    \renewcommand \thetable
-                                    {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@table}
+                                      \@addtoreset {equation}{chapter}
+                                      \renewcommand\theequation
+                                      {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@equation}
+                                      \renewcommand \thefigure
+                                      {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@figure}
+                                      \renewcommand \thetable
+                                      {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@table}
 
 %------------------------------------------------------------
 %Redefine caption names
